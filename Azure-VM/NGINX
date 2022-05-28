@@ -1,0 +1,8 @@
+az vm extension set \
+  --resource-group luftborn \
+  --vm-name luftbornvm \
+  --name Nginx-Script \
+  --publisher Microsoft.Azure.Extensions \
+  --version 2.1 \
+  --settings '{"fileUris":Azure-VM\nginx-script/configure-nginx.sh"]}' \
+  --protected-settings '{"commandToExecute": "./configure-nginx.sh"}'

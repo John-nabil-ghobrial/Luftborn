@@ -1,0 +1,11 @@
+terraform init
+terraform plan -out main.tfplan
+terraform apply main.tfplan
+
+
+Run terraform output to get the virtual machine public IP address.
+    - terraform output public_ip_address
+
+
+Use SSH to connect to the virtual machine
+    - ssh -i id_rsa azureuser@<public_ip_address>
